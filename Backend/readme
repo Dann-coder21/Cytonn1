@@ -1,0 +1,45 @@
+## Database Setup
+
+This project uses a **MySQL** database to store user and task information.
+
+### Requirements
+
+- A running MySQL server.
+
+### Setup Instructions
+
+To set up the database for this project, please follow these steps:
+
+1.  **Create the Database:** You can manually create a database named `cyton_project` or let the provided SQL script do it for you.
+2.  **Import the SQL Dump File:** Use a MySQL client (such as MySQL Workbench, DBeaver, or the command-line interface) to run the `database.sql` file included in the root of this project. This single file will:
+    *   Create the `cyton_project` database if it doesn't exist.
+    *   Create the `users` and `tasks` tables with the correct structure and relationships.
+    *   Populate the tables with sample data, including an admin and several regular users, so you can test the application immediately.
+3.  **Configure Environment Variables:** Ensure your backend's `.env` file has the correct database credentials:
+    ```env
+  # .env file
+
+# --- Database Configuration ---
+DB_HOST=localhost 
+DB_USER=root
+DB_PASSWORD=1234
+DB_DATABASE=cyton_project
+DB_PORT=3306 
+
+ADMIN_REGISTRATION_CODE="SUPER_SECRET_123"
+
+EMAIL_USER="kabuedann@gmail.com"
+EMAIL_PASS="oinj ihpo ylft gpyq"
+    ```
+
+### Sample Login Credentials
+
+Once the database is set up, you can log in with the following sample accounts:
+
+-   **Admin Account:**
+    -   **Email:** `admin@example.com`
+    -   **Password:** `password`
+
+-   **User Account:**
+    -   **Email:** `john.doe@example.com`
+    -   **Password:** `password`
